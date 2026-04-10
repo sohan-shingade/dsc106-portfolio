@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Sohan Shingade</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/resume/" class="current">Resume</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="https://github.com/sohan-shingade" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <h1>Sohan Shingade</h1>
+  <p>sohanshingade@gmail.com | 650 305 6043 | <a href="https://github.com/sohan-shingade" target="_blank">github.com/sohan-shingade</a> | U.S. Citizen</p>
+  <p><a href="../resume.pdf">Download PDF version</a></p>
+
+  <section>
+    <h2>Education</h2>
+    <article>
+      <h3>University of California San Diego &mdash; B.S. in Data Science</h3>
+      <p><time datetime="2023-09">Sep 2023</time> &ndash; Present (Expected <time datetime="2027-06">June 2027</time>)</p>
+      <p>Coursework: Machine Learning, Deep Learning, Statistical Learning, Econometrics, Time Series Analysis, Distributed Systems, Algorithms &amp; Data Structures, Databases &amp; SQL, Optimization, Computer Vision, NLP, Cloud Computing / HPC</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <article>
+      <h3>Triton Trading Group</h3>
+      <p><strong>Quantitative Research Lead</strong> &mdash; La Jolla, CA | <time datetime="2025-09">Sep 2025</time> &ndash; Present</p>
+      <ul>
+        <li>Lead a 12+ member quant research team operating a profitable live portfolio with a realized Sharpe ratio of 3.1; manage signal ideation through walkforward backtesting to live execution</li>
+        <li>Built AI-assisted research pipelines for feature selection, regime filtering, and automated parameter sweeps; increased team iteration throughput by 2.5x</li>
+        <li>Developed transaction-cost-aware backtesting infrastructure with slippage modeling and MEV-aware execution analysis; top strategy achieved 2.0+ Sharpe with &lt;8% max drawdown OOS</li>
+        <li>Standardized evaluation protocols (turnover constraints, factor exposure checks, leakage tests) and review gates; reduced overfit submissions by 35%, improved paper-trade promotion rate by 40%</li>
+        <li>Produced weekly research reports synthesizing market trends, strategy performance, and actionable recommendations; reduced manual status-gathering by 60% through automated dashboards</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Yonder Dynamics</h3>
+      <p><strong>Software Engineer</strong> &mdash; La Jolla, CA | <time datetime="2024-09">Sep 2024</time> &ndash; Present</p>
+      <ul>
+        <li>Developed and deployed PyTorch ML models for real-time inference on an autonomous robotics platform; achieved 92% accuracy at 30 FPS on edge hardware via batch optimization</li>
+        <li>Built distributed Python/C++ services for data ingestion, model serving, and telemetry via REST APIs; improved pipeline throughput by 1.8x via async I/O and batching</li>
+        <li>Built a React/TypeScript dashboard for real-time system monitoring; reduced operator debugging time by 45% with interactive filtering and log replay</li>
+        <li>Containerized services with Docker and orchestrated CI/CD pipelines; cut environment setup time from 2 hours to 15 minutes for new contributors</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Shepherd Ventures</h3>
+      <p><strong>Data Platform Engineer</strong> &mdash; San Diego, CA | <time datetime="2024-09">Sep 2024</time> &ndash; Present</p>
+      <ul>
+        <li>Built Python+SQL data pipelines on AWS (S3, EC2, Lambda) to ingest and serve datasets from 5+ sources; reduced data refresh latency by 46% and eliminated manual ETL</li>
+        <li>Trained and evaluated ML models (scikit-learn, XGBoost, PyTorch) with rigorous validation; improved experiment cycle time by 2.0x via modular feature engineering</li>
+        <li>Designed a PostgreSQL analytics platform with parameterized endpoints and Redis caching; improved load times by 3x for internal consumers</li>
+        <li>Developed NLP sentiment parsing on financial news and social data; reduced false positives by 30% through calibration and cross-signal research</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Stockbee</h3>
+      <p><strong>Software Engineer Intern</strong> &mdash; Cupertino, CA | <time datetime="2024-06">Jun 2024</time> &ndash; <time datetime="2024-08">Aug 2024</time></p>
+      <ul>
+        <li>Designed and shipped production backend services in Go and Python for real-time trading analytics; reduced p95 API latency by 35% via profiling and connection pooling</li>
+        <li>Built automated data validation and regression testing gates; blocked 15k+ malformed records and cut production incidents by 22%</li>
+        <li>Implemented structured logging, Grafana dashboards, and on-call runbooks across 3 microservices; reduced MTTR by 40% with end-to-end tracing</li>
+        <li>Designed scalable REST API endpoints with pagination, filtering, and rate limiting; served 50k+ daily requests at &lt;100ms median latency</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+
+    <article>
+      <h3>Flint &mdash; Solana DeFi Algorithmic Trading &amp; Backtesting Engine</h3>
+      <p>Local-first algo trading framework for Solana DeFi. 13 data providers, event-driven backtest engine with realistic fill/fee models, Optuna hyperparameter optimization, paper trading with risk guards. React 19 UI with TradingView charts. Python/FastAPI/DuckDB. 497 tests.</p>
+    </article>
+
+    <article>
+      <h3>Jobslop &mdash; VC-Backed Startup Job Aggregator</h3>
+      <p>Full-stack app aggregating 12,800+ listings from 35+ VC portfolio boards (Sequoia, a16z, Greylock). Async Python scrapers, Turso DB, Next.js/SSR. AI resume matching via Groq/Llama 3.3 70B. Sub-200ms loads, 99.8% uptime.</p>
+    </article>
+
+    <article>
+      <h3>Order Book Simulator &mdash; Price-Time Priority Matching Engine (C++)</h3>
+      <p>Full limit order book with per-price FIFO queues, deterministic matching, partial fills, event-level audit logs. Microstructure features (spread, depth, imbalance), 500k+ events/sec.</p>
+    </article>
+
+    <article>
+      <h3>Wildfire Risk Heatmap &mdash; Geospatial ML Pipeline</h3>
+      <p>Binary classification on 2.4M rows from 6 data sources. scikit-learn with extreme class imbalance handling, ROC/PR AUC evaluation, interactive folium heatmaps.</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> Python, Rust, TypeScript/JavaScript, SQL, C++, Go, Java, Kotlin, VBA, Bash, R</li>
+      <li><strong>ML/AI:</strong> PyTorch, scikit-learn, XGBoost, LLM integration (Groq, LangChain), model serving, inference optimization, NLP</li>
+      <li><strong>Backend &amp; Infra:</strong> FastAPI, Node.js, REST/WebSocket APIs, PostgreSQL, Redis, DuckDB, Docker, AWS (S3/EC2/Lambda), CI/CD, Kubernetes</li>
+      <li><strong>Data &amp; Finance:</strong> pandas, NumPy, ETL pipelines, batch processing, financial modeling, backtesting, portfolio analytics, market microstructure</li>
+    </ul>
+  </section>
+</body>
+</html>

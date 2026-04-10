@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Sohan Shingade</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/resume/">Resume</a></li>
+      <li><a href="/contact/" class="current">Contact</a></li>
+      <li><a href="https://github.com/sohan-shingade" target="_blank">GitHub</a></li>
+    </ul>
+  </nav>
+
+  <h1>Contact Me</h1>
+
+  <p>Feel free to reach out using the form below.</p>
+
+  <form action="mailto:sohanshingade@gmail.com" method="POST" enctype="text/plain">
+    <label>
+      Your Email
+      <input type="email" name="email" value="you@example.com">
+    </label>
+
+    <label>
+      Subject
+      <input name="subject" value="Hello!">
+    </label>
+
+    <label>
+      Message
+      <textarea name="body">Hi Sohan, I wanted to reach out about...</textarea>
+    </label>
+
+    <button type="submit">Send Message</button>
+  </form>
+</body>
+</html>
