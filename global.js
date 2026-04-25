@@ -84,3 +84,45 @@ form?.addEventListener('submit', (event) => {
   const url = `${form.action}?${params.join('&')}`;
   location.href = url;
 });
+
+export async function fetchJSON(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('fetchJSON error:', error);
+    throw error;
+  }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement) return;
+  const validHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
+  const heading = validHeadings.includes(headingLevel) ? headingLevel : 'h2';
+
+  containerElement.innerHTML = '';
+
+  for (const project of projects) {
+    const article = document.createElement('article');
+    const title = project.title ?? '';
+    const year = project.year ?? '';
+    const image = project.image ?? '';
+    const description = project.description ?? '';
+    article.innerHTML = `
+      <${heading}>${title}</${heading}>
+      <img src="${image}" alt="${title}">
+      <div class="project-body">
+        <p>${description}</p>
+        <p class="project-year">c. ${year}</p>
+      </div>
+    `;
+    containerElement.append(article);
+  }
+}
+
+export async function fetchGitHubData(username) {
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}

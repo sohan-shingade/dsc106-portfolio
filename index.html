@@ -6,6 +6,7 @@
   <title>Sohan Shingade: Personal site and portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script type="module" src="global.js"></script>
+  <script type="module" src="index.js" defer></script>
 </head>
 <body>
   <h1>Sohan Shingade</h1>
@@ -13,7 +14,7 @@
   <img class="photo" src="images/photo.jpg" alt="Photo of Sohan Shingade">
 
   <p>
-    Hi! I'm Sohan, a Data Science student at UC San Diego (expected June 2027).
+    Hi, I'm Sohan, a Data Science student at UC San Diego (expected June 2027).
     I'm interested in quantitative research, machine learning, and building
     data-driven systems. I currently lead quant research at Triton Trading Group
     and work as a software engineer at Yonder Dynamics.
@@ -23,5 +24,15 @@
     Check out my <a href="./projects/">projects</a> or view my <a href="./resume/">resume</a>.
     You can also download my <a href="resume.pdf">resume as a PDF</a>.
   </p>
+
+  <section id="github-profile">
+    <h2>GitHub Profile</h2>
+    <div id="profile-stats">Loading GitHub stats&hellip;</div>
+  </section>
+
+  <section id="latest-projects">
+    <h2>Latest Projects</h2>
+    <div class="projects"></div>
+  </section>
 </body>
 </html>

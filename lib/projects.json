@@ -1,0 +1,74 @@
+[
+  {
+    "title": "Flint",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Algorithmic trading, backtesting, and MEV research for Solana. Local-first, free data, Drift-native. Python/FastAPI/DuckDB."
+  },
+  {
+    "title": "Jobslop",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Job board aggregator for VC-backed startups. 12,800+ jobs from 35+ venture capital portfolio boards with search, filters, and AI-powered resume matching."
+  },
+  {
+    "title": "Order Book Simulator",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Production-grade price-time priority matching engine. Limit/market orders, partial fills, IOC/FOK, cancel/replace, synthetic event generation, and interactive visualizations."
+  },
+  {
+    "title": "Wildfire Risk Heatmap",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "End-to-end geospatial ML pipeline predicting wildfire ignition risk across California. Fuses 7+ datasets into interactive folium risk heatmaps."
+  },
+  {
+    "title": "MEV Kit",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Open-source Solana MEV framework for strategy development, backtesting, and execution. Built with Python."
+  },
+  {
+    "title": "Deep Curriculum",
+    "year": 2025,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Interactive graduate-level CS courses with lectures, exercises, Mermaid diagrams, and interactive simulations. Built with Next.js 15, Pyodide, and KaTeX."
+  },
+  {
+    "title": "Billing Platform",
+    "year": 2024,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Self-contained usage-based billing platform for SaaS. Ingest events, aggregate usage, generate invoices. Python + SQLite + TypeScript dashboard."
+  },
+  {
+    "title": "SolEdu",
+    "year": 2023,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Solana education platform with deep-dive courses on MEV, DeFi, and blockchain development. Built with JavaScript."
+  },
+  {
+    "title": "FujiLUT",
+    "year": 2023,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Convert Fujifilm film simulation recipes into .cube LUT files and HaldCLUT PNGs. Built with Python."
+  },
+  {
+    "title": "SweatEquity",
+    "year": 2023,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Fitness accountability app built with TypeScript. Track workouts, set goals, and stay consistent."
+  },
+  {
+    "title": "TrckR",
+    "year": 2022,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Personal energy tracker built with TypeScript. Monitor and log daily energy levels over time."
+  },
+  {
+    "title": "Journey Tracker",
+    "year": 2022,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "React Native app for building and tracking learning journeys, from picking up a new skill to sticking with a habit."
+  }
+]

@@ -135,6 +135,52 @@ form button {
   width: 100%;
 }
 
+.projects article .project-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.projects article .project-body p {
+  margin: 0;
+}
+
+.project-year {
+  font-variant-numeric: oldstyle-nums;
+  color: color-mix(in oklch, canvastext 60%, canvas);
+  font-size: 90%;
+}
+
+/* GitHub profile stats */
+#profile-stats {
+  margin-block: 1rem;
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25em 1em;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid color-mix(in oklch, canvastext 25%, canvas);
+  border-radius: 8px;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: color-mix(in oklch, canvastext 60%, canvas);
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0;
+  font-size: 180%;
+  font-weight: 600;
+}
+
 /* Resume Sections */
 section {
   margin-bottom: 2rem;
