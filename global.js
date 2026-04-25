@@ -130,6 +130,8 @@ export async function fetchGitHubData(username) {
 /*
   Think About It (Step 2.2):
   Q: Why do we need the `type="module"` attribute?
-  A: Enables `import`/`export`, strict mode, own scope, deferred load.
-     Classic `<script>` can't `import`.
+  A: It tells the browser to load the file as an ES module, so `import`
+     and `export` work. Modules also run in strict mode, get their own
+     top-level scope so nothing leaks onto `window`, and defer until the
+     HTML is parsed. A regular `<script>` can't import at all.
 */
