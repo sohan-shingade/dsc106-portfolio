@@ -4,6 +4,7 @@ let data = [];
 let commits = [];
 let xScale, yScale, rScale;
 let usableArea;
+let hideTimeout;
 
 async function loadData() {
   data = await d3.csv('loc.csv', (row) => ({
@@ -146,6 +147,7 @@ function renderScatterPlot() {
     .attr('fill', 'steelblue')
     .style('fill-opacity', 0.7)
     .on('mouseenter', (event, commit) => {
+      clearTimeout(hideTimeout);
       d3.select(event.currentTarget).style('fill-opacity', 1);
       renderTooltipContent(commit);
       updateTooltipVisibility(true);
@@ -153,7 +155,7 @@ function renderScatterPlot() {
     })
     .on('mouseleave', (event) => {
       d3.select(event.currentTarget).style('fill-opacity', 0.7);
-      updateTooltipVisibility(false);
+      hideTimeout = setTimeout(() => updateTooltipVisibility(false), 300);
     });
 
   svg.call(d3.brush().on('start brush end', brushed));
@@ -255,5 +257,9 @@ function renderLanguageBreakdown(selection) {
     `;
   }
 }
+
+const tooltip = document.getElementById('commit-tooltip');
+tooltip.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
+tooltip.addEventListener('mouseleave', () => updateTooltipVisibility(false));
 
 loadData();

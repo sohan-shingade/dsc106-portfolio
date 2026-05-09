@@ -264,7 +264,6 @@ circle.selected {
   border-radius: 4px;
   border: 1px solid color-mix(in oklch, canvastext 20%, canvas);
   padding: 1em;
-  pointer-events: none;
   z-index: 10;
   transition-duration: 500ms;
   transition-property: opacity, visibility;
