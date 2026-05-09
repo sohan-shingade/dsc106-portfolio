@@ -201,3 +201,113 @@ th, td {
   padding: 0.5rem;
   border-bottom: 1px solid #ddd;
 }
+
+/* Stats definition list */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.5em 1em;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid color-mix(in oklch, canvastext 25%, canvas);
+  border-radius: 8px;
+}
+
+.stat dt {
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: color-mix(in oklch, canvastext 60%, canvas);
+}
+
+.stat dd {
+  margin: 0;
+  font-size: 130%;
+  font-weight: 600;
+}
+
+/* Scatter plot */
+#chart svg {
+  max-width: 100%;
+}
+
+.gridlines line {
+  stroke: color-mix(in oklch, canvastext 15%, canvas);
+}
+
+.gridlines .domain {
+  display: none;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+  cursor: pointer;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+circle.selected {
+  fill: oklch(75% 40% 30);
+}
+
+/* Tooltip */
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background-color: color-mix(in oklch, canvas 95%, canvastext);
+  box-shadow: 0 2px 8px color-mix(in oklch, canvastext 15%, transparent);
+  border-radius: 4px;
+  border: 1px solid color-mix(in oklch, canvastext 20%, canvas);
+  padding: 1em;
+  pointer-events: none;
+  z-index: 10;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+.tooltip[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tooltip dt {
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: color-mix(in oklch, canvastext 60%, canvas);
+  margin-top: 0.5em;
+}
+
+.tooltip dt:first-child {
+  margin-top: 0;
+}
+
+.tooltip dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Brush selection */
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8;
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: canvastext;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+#selection-count {
+  font-size: 90%;
+  color: color-mix(in oklch, canvastext 60%, canvas);
+}

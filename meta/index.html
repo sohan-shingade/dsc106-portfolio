@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta: Code Analysis</title>
+  <link rel="stylesheet" href="../style.css">
+  <script type="module" src="../global.js"></script>
+  <script type="module" src="main.js" defer></script>
+</head>
+<body>
+  <h1>Meta</h1>
+
+  <p>
+    This page is a self-referential look at my portfolio's own codebase.
+    Using D3, I analyzed every line of code I've written so far to see when
+    I work, what languages I use, and how the project has grown over time.
+  </p>
+
+  <section>
+    <h2>Summary</h2>
+    <dl id="stats" class="stats"></dl>
+  </section>
+
+  <section>
+    <h2>Commits by Time of Day</h2>
+    <div id="chart"></div>
+    <p id="selection-count">No commits selected</p>
+    <dl id="language-breakdown" class="stats"></dl>
+  </section>
+
+  <dl id="commit-tooltip" class="info tooltip" hidden>
+    <dt>Commit</dt>
+    <dd><a href="" id="commit-link" target="_blank"></a></dd>
+    <dt>Date</dt>
+    <dd id="commit-date"></dd>
+    <dt>Time</dt>
+    <dd id="commit-time"></dd>
+    <dt>Author</dt>
+    <dd id="commit-author"></dd>
+    <dt>Lines Edited</dt>
+    <dd id="commit-lines"></dd>
+  </dl>
+</body>
+</html>
