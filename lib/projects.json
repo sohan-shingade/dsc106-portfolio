@@ -1,5 +1,12 @@
 [
   {
+    "title": "Bikewatching",
+    "year": 2026,
+    "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+    "description": "Interactive geospatial visualization of Boston & Cambridge bike-share traffic using Mapbox, D3, and SVG overlays. Filter by time of day and explore station-level departure/arrival flow.",
+    "url": "https://sohan-shingade.github.io/bikewatching/"
+  },
+  {
     "title": "Flint",
     "year": 2025,
     "image": "https://vis-society.github.io/labs/2/images/empty.svg",

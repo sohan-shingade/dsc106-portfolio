@@ -244,6 +244,10 @@ circle {
   transform-origin: center;
   transform-box: fill-box;
   cursor: pointer;
+
+  @starting-style {
+    r: 0;
+  }
 }
 
 circle:hover {
@@ -309,4 +313,116 @@ circle.selected {
 #selection-count {
   font-size: 90%;
   color: color-mix(in oklch, canvastext 60%, canvas);
+}
+
+/* Slider */
+.slider-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5em;
+  margin-bottom: 0.5rem;
+}
+
+.slider-wrapper input[type="range"] {
+  flex: 1;
+}
+
+.slider-wrapper time {
+  margin-left: auto;
+  font-size: 90%;
+  white-space: nowrap;
+}
+
+/* Scrollytelling */
+#scrolly-1 {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+}
+
+#scrolly-1 > * {
+  flex: 1;
+}
+
+#scatter-story {
+  position: relative;
+}
+
+#scatter-plot {
+  position: sticky;
+  top: 0;
+  left: 0;
+  bottom: auto;
+  height: fit-content;
+  max-height: 100vh;
+  align-self: start;
+}
+
+.step {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-size: 110%;
+  line-height: 1.6;
+}
+
+.step:last-child {
+  min-height: 50vh;
+}
+
+.step a {
+  color: var(--color-accent);
+}
+
+/* Unit visualization — files */
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+#files > div.file {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  border-bottom: 1px solid color-mix(in oklch, canvastext 10%, canvas);
+  padding: 0.5em 0;
+}
+
+#files dt {
+  grid-column: 1;
+}
+
+#files dt code {
+  font-size: 90%;
+}
+
+#files dt small {
+  display: block;
+  font-size: 75%;
+  color: color-mix(in oklch, canvastext 50%, canvas);
+}
+
+#files dd {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  align-content: start;
+  gap: 0.15em;
+  padding-top: 0.6em;
+  margin-left: 0;
+}
+
+.loc {
+  width: 0.5em;
+  aspect-ratio: 1;
+  background: var(--color);
+  border-radius: 50%;
+
+  @starting-style {
+    transform: scale(0);
+  }
+
+  transition: transform 200ms;
 }
